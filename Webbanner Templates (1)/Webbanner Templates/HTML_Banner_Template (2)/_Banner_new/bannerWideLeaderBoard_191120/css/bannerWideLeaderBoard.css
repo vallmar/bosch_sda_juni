@@ -1,0 +1,103 @@
+/* begin BannerWideLeaderBoard */
+.M-B-BannerWideLeaderBoard {
+  position: relative;
+  display: block;
+  width: 970px;
+  height: 90px;
+  border: 1px solid lightgrey;
+  overflow: hidden;
+}
+
+.M-B-BannerWideLeaderBoard__bg {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 432px;
+  height: 90px;
+  background-size: 100% auto;
+  z-index: -1;
+}
+
+.M-B-BannerWideLeaderBoard__bg--animate {
+  animation: image-slide-left 1s ease-out;
+}
+
+@keyframes image-slide-left {
+  0% {
+	  right: -432px;
+	 }
+  100% {
+	  bottom: 0;
+	  }
+}
+
+.M-B-BannerWideLeaderBoard__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.M-B-BannerWideLeaderBoard__content {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 29rem 1rem 11rem ;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.M-B-BannerWideLeaderBoard__contentBlock--animate {
+  -webkit-animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+}
+
+.M-B-BannerWideLeaderBoard__textWrapper {
+  padding-right: 2rem;
+}
+
+.M-B-BannerWideLeaderBoard__headline {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1s;
+}
+
+.M-B-BannerWideLeaderBoard__text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  opacity: 0;
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1.2s;
+}
+
+.M-B-BannerWideLeaderBoard__cta {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  background: #007bc0;
+  padding: 0 0.5rem;
+  color: #fff;
+  height: 2.25rem;
+  text-decoration: none;
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: text-fade-in .5s forwards;
+  animation: text-fade-in .5s forwards;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+  transition: 0.5s;
+}
+
+.M-B-BannerWideLeaderBoard__cta:hover {
+  background: #00629a;
+  transition: 0.5s;
+}
+
+.M-B-BannerWideLeaderBoard__cta:active {
+  background: #004975;
+}
+/* end BannerWideLeaderBoard */

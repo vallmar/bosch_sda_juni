@@ -1,0 +1,111 @@
+/* begin BannerBillboard */
+.M-B-BannerBillboard {
+  position: relative;
+  display: block;
+  width: 1500px;
+  height: 700px;
+  border: 1px solid lightgrey;
+  overflow: hidden;
+}
+
+.M-B-BannerBillboard::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 15px;
+  background: #fff;
+  content: '';
+  z-index: 1;
+}
+
+.M-B-BannerBillboard__bg {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 920px;
+  height: 700px;
+  background-size: 100% auto;
+  z-index: -1;
+}
+
+.M-B-BannerBillboard__bg--animate {
+  animation: image-slide-left 1s ease-out;
+}
+
+@keyframes image-slide-left {
+  0% {
+	  right: -920px;
+	 }
+  100% {
+	  bottom: 0;
+	  }
+}
+
+.M-B-BannerBillboard__logo {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.M-B-BannerBillboard__content {
+  padding: 7.5rem 60.5rem 2rem 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.M-B-BannerBillboard__contentBlock--animate {
+  -webkit-animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  position: absolute;
+}
+
+.M-B-BannerBillboard__headline {
+  font-size: 4rem;
+  line-height: 4.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1s;
+}
+
+.M-B-BannerBillboard__text {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1.2s;
+}
+
+.M-B-BannerBillboard__cta {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 3rem;
+  background: #007bc0;
+  padding: 0 1rem;
+  color: #fff;
+  height: 3rem;
+  text-decoration: none;
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: text-fade-in .5s forwards;
+  animation: text-fade-in .5s forwards;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+  transition: 0.5s;
+}
+
+.M-B-BannerBillboard__cta:hover {
+  background: #00629a;
+  transition: 0.5s;
+}
+
+.M-B-BannerBillboard__cta:active {
+  background: #004975;
+}
+
+/* end BannerBillboard */

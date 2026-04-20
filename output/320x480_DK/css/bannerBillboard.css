@@ -1,0 +1,124 @@
+/* begin BannerBillboard */
+.M-B-BannerBillboard {
+  position: relative;
+  display: block;
+  width: 320px;
+  height: 480px;
+  border: 1px solid lightgrey;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.M-B-BannerBillboard__bg {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 320px;
+  height: 480px;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 0;
+}
+
+.M-B-BannerBillboard__bg--animate {
+  animation: image-slide-up 1s ease-out;
+}
+
+@keyframes image-slide-up {
+  0% {
+    bottom: -480px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.M-B-BannerBillboard__logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 50px;
+  z-index: 2;
+}
+
+.M-B-BannerBillboard__content {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  width: 320px;
+  height: 480px;
+}
+
+.M-B-BannerBillboard__contentBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 480px;
+  opacity: 0;
+}
+
+.M-B-BannerBillboard__contentBlock--animate {
+  animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+}
+
+.M-B-BannerBillboard__contentBlock--animateLast {
+  animation: text-fade-in-stay 1s forwards;
+}
+
+/* Frame 1 text area */
+.frame1-text {
+  position: absolute;
+  top: 55px;
+  left: 16px;
+  right: 16px;
+  z-index: 1;
+}
+
+.frame1-text img {
+  width: 280px;
+  height: auto;
+}
+
+/* Frame 2 text area */
+.frame2-text {
+  position: absolute;
+  top: 55px;
+  left: 16px;
+  right: 16px;
+  z-index: 1;
+}
+
+.frame2-text img.text2-img {
+  width: 280px;
+  height: auto;
+}
+
+.frame2-cta {
+  position: absolute;
+  top: 170px;
+  left: 16px;
+  z-index: 1;
+}
+
+.frame2-cta img {
+  height: 28px;
+  width: auto;
+}
+
+.frame2-badge {
+  position: absolute;
+  top: 210px;
+  left: 16px;
+  z-index: 2;
+}
+
+.frame2-badge img {
+  width: 90px;
+  height: auto;
+}
+
+/* end BannerBillboard */

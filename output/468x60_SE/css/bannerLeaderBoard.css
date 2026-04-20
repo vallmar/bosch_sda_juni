@@ -1,0 +1,101 @@
+/* begin BannerLeaderBoard 468x60 */
+.M-B-BannerLeaderBoard {
+  position: relative;
+  display: block;
+  width: 468px;
+  height: 60px;
+  border: 1px solid lightgrey;
+  overflow: hidden;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.M-B-BannerLeaderBoard__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: auto;
+  z-index: 2;
+}
+
+.M-B-BannerLeaderBoard__content {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  width: 468px;
+  height: 60px;
+}
+
+.M-B-BannerLeaderBoard__contentBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 468px;
+  height: 60px;
+  opacity: 0;
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animate {
+  animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animateLast {
+  animation: text-fade-in-stay 1s forwards;
+}
+
+/* Frame 1 text area - centered after logo */
+.frame1-text {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.frame1-text img {
+  height: 36px;
+  width: auto;
+}
+
+/* Frame 2 text area */
+.frame2-text {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.frame2-text img.text2-img {
+  height: 36px;
+  width: auto;
+}
+
+.frame2-badge {
+  position: absolute;
+  top: 50%;
+  left: 280px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.frame2-badge img {
+  width: 46px;
+  height: auto;
+}
+
+.frame2-cta {
+  position: absolute;
+  top: 50%;
+  left: 340px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.frame2-cta img {
+  height: 20px;
+  width: auto;
+}
+
+/* end BannerLeaderBoard 468x60 */

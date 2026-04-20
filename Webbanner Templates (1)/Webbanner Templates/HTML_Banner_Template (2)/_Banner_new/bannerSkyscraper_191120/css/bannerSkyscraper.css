@@ -1,0 +1,98 @@
+/* begin BannerSkyscraper */
+.M-B-BannerSkyscraper {
+  position: relative;
+  display: block;
+  width: 160px;
+  height: 600px;
+  border: 1px solid lightgrey;
+  overflow: hidden;
+}
+
+.M-B-BannerSkyscraper__bg {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 160px;
+  height: 374px;
+  background-size: auto;
+  z-index: -1;
+}
+
+.M-B-BannerSkyscraper__bg--animate {
+  animation: image-slide-up 1s ease-out;
+}
+
+@keyframes image-slide-up {
+  0% {
+	  bottom: -374px;
+	 }
+  100% {
+	  bottom: 0;
+	  }
+}
+
+.M-B-BannerSkyscraper__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.M-B-BannerSkyscraper__content {
+  padding: 4rem 1rem 2rem 1rem;
+}
+
+.M-B-BannerSkyscraper__contentBlock--animate {
+  -webkit-animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  position: absolute;
+}
+
+.M-B-BannerSkyscraper__headline {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1s;
+}
+
+.M-B-BannerSkyscraper__text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  opacity: 0;
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1.2s;
+}
+
+.M-B-BannerSkyscraper__cta {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  background: #007bc0;
+  padding: 0 0.5rem;
+  color: #fff;
+  height: 2.25rem;
+  text-decoration: none;
+  z-index: 1;
+  opacity: 0;
+  margin-top: 1rem;
+  -webkit-animation: text-fade-in .5s forwards;
+  animation: text-fade-in .5s forwards;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+  transition: 0.5s;
+}
+
+.M-B-BannerSkyscraper__cta:hover {
+  background: #00629a;
+  transition: 0.5s;
+}
+
+.M-B-BannerSkyscraper__cta:active {
+  background: #004975;
+}
+/* end BannerSkyscraper */

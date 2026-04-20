@@ -1,0 +1,102 @@
+/* begin BannerMedium */
+.M-B-BannerMedium {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 250px;
+  border: 1px solid lightgrey;
+  overflow: hidden;
+}
+
+.M-B-BannerMedium::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 15px;
+  background: #fff;
+  content: '';
+  z-index: 1;
+}
+
+.M-B-BannerMedium__bg {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 102px;
+  height: 250px;
+  background-size: 100% auto;
+  z-index: -1;
+}
+
+.M-B-BannerMedium__bg--animate {
+   animation: image-slide-left 1s ease-out;
+}
+
+@keyframes image-slide-left {
+  0% {
+	  right: -250px;
+	 }
+  100% {
+	  bottom: 0;
+	  }
+}
+
+.M-B-BannerMedium__logo {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.M-B-BannerMedium__content {
+  padding: 3.5rem 7.5rem 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.M-B-BannerMedium__contentBlock--animate {
+  -webkit-animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  position: absolute;
+}
+
+.M-B-BannerMedium__text {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1s;
+}
+
+.M-B-BannerMedium__cta {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  background: #007bc0;
+  padding: 0 0.5rem;
+  color: #fff;
+  height: 2.25rem;
+  text-decoration: none;
+  z-index: 1;
+  opacity: 0;
+  margin-top: 1rem;
+  -webkit-animation: text-fade-in .5s forwards;
+  animation: text-fade-in .5s forwards;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+  transition: 0.5s;
+}
+
+.M-B-BannerMedium__cta:hover {
+  background: #00629a;
+  transition: 0.5s;
+}
+
+.M-B-BannerMedium__cta:active {
+  background: #004975;
+}
+
+/* end BannerMedium */
