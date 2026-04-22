@@ -4,7 +4,8 @@
   display: block;
   width: 160px;
   height: 600px;
-  border: 1px solid lightgrey;
+ 
+     border: 1px solid lightgrey;
   overflow: hidden;
   cursor: pointer;
 }
@@ -16,9 +17,8 @@
   left: 0;
   display: block;
   width: 160px;
-  height: 600px;
-  background-size: cover;
-  background-position: bottom center;
+  height: 300px;
+  background-position: top center;
   z-index: 0;
 }
 
@@ -28,7 +28,7 @@
 
 @keyframes image-slide-up {
   0% {
-    bottom: -600px;
+    bottom: -300px;
   }
   100% {
     bottom: 0;
@@ -61,20 +61,89 @@
   opacity: 0;
 }
 
+@keyframes content-block-fade-in-out {
+  0%, 6% {
+    opacity: 0;
+  }
+  7%, 40% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes content-block-fade-in-stay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .M-B-BannerSkyscraper__contentBlock--animate {
-  animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  animation: content-block-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
 }
 
 .M-B-BannerSkyscraper__contentBlock--animateLast {
-  animation: text-fade-in-stay 1s forwards;
+  animation: content-block-fade-in-stay 1s forwards;
+}
+
+@keyframes frame1-part-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.frame1-text__part,
+.frame2-text img,
+.frame2-cta img,
+.frame2-badge img {
+  opacity: 0;
+}
+
+.M-B-BannerSkyscraper__contentBlock--animate .frame1-text__part--top,
+.M-B-BannerSkyscraper__contentBlock--animateLast .frame1-text__part--top {
+  animation: frame1-part-fade-in .5s forwards;
+  animation-delay: 1s;
+}
+
+.M-B-BannerSkyscraper__contentBlock--animate .frame1-text__part--bottom,
+.M-B-BannerSkyscraper__contentBlock--animateLast .frame1-text__part--bottom {
+  animation: frame1-part-fade-in .5s forwards;
+  animation-delay: 1.2s;
+}
+
+.M-B-BannerSkyscraper__contentBlock--animate .frame2-text img,
+.M-B-BannerSkyscraper__contentBlock--animateLast .frame2-text img {
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1s;
+}
+
+.M-B-BannerSkyscraper__contentBlock--animate .frame2-cta img,
+.M-B-BannerSkyscraper__contentBlock--animateLast .frame2-cta img {
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1.4s;
+}
+
+.M-B-BannerSkyscraper__contentBlock--animate .frame2-badge img,
+.M-B-BannerSkyscraper__contentBlock--animateLast .frame2-badge img {
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1.2s;
 }
 
 /* Frame 1 text area */
 .frame1-text {
   position: absolute;
-  top: 60px;
-  left: 12px;
-  right: 8px;
+  top: 88px;
+  left: 18px;
+  right: 0px;
   z-index: 1;
 }
 
@@ -83,42 +152,60 @@
   height: auto;
 }
 
+.frame1-text__part {
+  position: relative;
+  overflow: hidden;
+}
+
+.frame1-text__part--top {
+  height: 70px;
+}
+
+.frame1-text__part--bottom {
+  height: 85px;
+  margin-top: 0px;
+}
+
+.frame1-text__part--bottom img {
+  transform: translateY(-70px);
+}
+
 /* Frame 2 text area */
 .frame2-text {
   position: absolute;
-  top: 60px;
-  left: 12px;
+  top: 88px;
+  left: 18px;
   right: 8px;
   z-index: 1;
 }
 
 .frame2-text img.text2-img {
-  width: 136px;
+  width: 119px;
   height: auto;
 }
 
 .frame2-cta {
   position: absolute;
-  top: 190px;
-  left: 12px;
+  top: 209px;
+  left: 18px;
   z-index: 1;
 }
 
 .frame2-cta img {
-  height: 24px;
-  width: auto;
+  height: 36px;
+  width: 90px;
 }
 
 .frame2-badge {
   position: absolute;
-  bottom: 210px;
+  top: 325px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
 }
 
 .frame2-badge img {
-  width: 105px;
+  width: 95px;
   height: auto;
 }
 

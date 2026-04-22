@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="ad.size" content="width=320,height=480">
+    <meta http-equiv="Cache-Control" content="no-cache">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Bosch Spotless 320x480 SE</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript">
+      var clickTag = "https://www.bosch-home.com/";
+    </script>
     <script src="js/bannerAnimator.js"></script>
   </head>
   <body>
+    <a href="javascript:void(window.open(clickTag))">
     <div class="M-B-BannerBillboard">
-      <!-- Background image -->
-      <div class="M-B-BannerBillboard__bg" style="background: url('images/Spotless-320x480.jpg') bottom center / cover no-repeat;"></div>
-
-      <!-- Logo -->
-      <img src="images/Logo-320x480.svg" class="M-B-BannerBillboard__logo" alt="Bosch" />
-
-      <div class="M-B-BannerBillboard__content">
-
-        <!-- Frame 1: Headline + Subline -->
-        <div class="M-B-BannerBillboard__contentBlock">
-          <div class="frame1-text">
-            <img src="images/Text1-SE-320x480.svg" alt="Bosch robotdammsugare. Stark. Pålitlig. Gör jobbet." />
+          <div class="M-B-BannerBillboard__bg" style="background: url('images/Spotless-320x480.jpg') bottom center / 320px 264px no-repeat;"></div>
+          <img src="images/Logo-320x480.svg" class="M-B-BannerBillboard__logo" alt="Bosch" />
+          <div class="M-B-BannerBillboard__content">
+            <div class="M-B-BannerBillboard__contentBlock">
+              <div class="frame1-text">
+                <div class="frame1-text__part frame1-text__part--top">
+                  <img src="images/Text1-SE-320x480.svg" alt="Bosch robotdammsugare. Stark. Pålitlig. Gör jobbet." />
+                </div>
+                <div class="frame1-text__part frame1-text__part--bottom" aria-hidden="true">
+                  <img src="images/Text1-SE-320x480.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="M-B-BannerBillboard__contentBlock">
+              <div class="frame2-text">
+                <img class="text2-img" src="images/Text2-SE-320x480.svg" alt="Köp nu, testa hemma." />
+              </div>
+              <div class="frame2-cta">
+                <img src="images/CTA-SE.svg" alt="Läs mer" />
+              </div>
+              <div class="frame2-badge">
+                <img src="images/MyBosch_100days_2023_SE_rgb.svg" alt="100 dagar" />
+              </div>
+            </div>
           </div>
-        </div>
-
-        <!-- Frame 2: CTA + 100 days badge -->
-        <div class="M-B-BannerBillboard__contentBlock">
-          <div class="frame2-text">
-            <img class="text2-img" src="images/Text2-SE-320x480.svg" alt="Köp nu, testa hemma." />
-          </div>
-          <div class="frame2-cta">
-            <img src="images/CTA-SE.svg" alt="Läs mer" />
-          </div>
-          <div class="frame2-badge">
-            <img src="images/MyBosch_100days_2023_SE_rgb.svg" alt="100 dagar" />
-          </div>
-        </div>
-
-      </div>
     </div>
-
+    </a>
     <script>
       var bannerAnimator = new BannerAnimator();
     </script>

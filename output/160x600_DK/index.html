@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="ad.size" content="width=160,height=600">
+    <meta http-equiv="Cache-Control" content="no-cache">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Bosch Spotless 160x600 DK</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript">
+      var clickTag = "https://www.bosch-home.com/";
+    </script>
     <script src="js/bannerAnimator.js"></script>
   </head>
   <body>
+    <a href="javascript:void(window.open(clickTag))">
     <div class="M-B-BannerSkyscraper">
-      <!-- Background image -->
-      <div class="M-B-BannerSkyscraper__bg" style="background: url('images/Spotless-160x600.jpg') bottom center / cover no-repeat;"></div>
-
-      <!-- Logo -->
+      <div class="M-B-BannerSkyscraper__bg" style="background: url('images/Spotless-160x600.jpg') top center / 160px 339px no-repeat;"></div>
       <img src="images/Logo-160x600.svg" class="M-B-BannerSkyscraper__logo" alt="Bosch" />
-
       <div class="M-B-BannerSkyscraper__content">
-
-        <!-- Frame 1: Headline + Subline -->
         <div class="M-B-BannerSkyscraper__contentBlock">
           <div class="frame1-text">
-            <img src="images/Text1-DK-160x600.svg" alt="Bosch robotstøvsugere. Stærk. Pålidelig. Klarer arbejdet." />
+            <div class="frame1-text__part frame1-text__part--top">
+              <img src="images/Text1-DK-160x600.svg" alt="Bosch robotstøvsugere. Stærk. Pålidelig. Klarer arbejdet." />
+            </div>
+            <div class="frame1-text__part frame1-text__part--bottom" aria-hidden="true">
+              <img src="images/Text1-DK-160x600.svg" alt="" />
+            </div>
           </div>
         </div>
-
-        <!-- Frame 2: CTA + 100 days badge -->
         <div class="M-B-BannerSkyscraper__contentBlock">
           <div class="frame2-text">
             <img class="text2-img" src="images/Text2-DK-160x600.svg" alt="Køb nu, test den derhjemme." />
@@ -36,10 +44,9 @@
             <img src="images/MyBosch_100days_2023_DK_rgb.svg" alt="100 dage" />
           </div>
         </div>
-
       </div>
     </div>
-
+    </a>
     <script>
       var bannerAnimator = new BannerAnimator();
     </script>

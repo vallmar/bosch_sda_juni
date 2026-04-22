@@ -4,7 +4,8 @@
   display: block;
   width: 320px;
   height: 480px;
-  border: 1px solid lightgrey;
+ 
+     border: 1px solid lightgrey;
   overflow: hidden;
   cursor: pointer;
 }
@@ -38,9 +39,9 @@
 .M-B-BannerBillboard__logo {
   position: absolute;
   top: 0;
-  right: 0;
-  width: auto;
-  height: 50px;
+  left: 0;
+  width: 320px;
+  height: auto;
   z-index: 2;
 }
 
@@ -61,63 +62,151 @@
   opacity: 0;
 }
 
+@keyframes content-block-fade-in-out {
+  0%, 6% {
+    opacity: 0;
+  }
+  7%, 40% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes content-block-fade-in-stay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .M-B-BannerBillboard__contentBlock--animate {
-  animation: text-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  animation: content-block-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
 }
 
 .M-B-BannerBillboard__contentBlock--animateLast {
-  animation: text-fade-in-stay 1s forwards;
+  animation: content-block-fade-in-stay 1s forwards;
+}
+
+@keyframes frame1-part-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.frame1-text__part,
+.frame2-text img,
+.frame2-cta img,
+.frame2-badge img {
+  opacity: 0;
+}
+
+.M-B-BannerBillboard__contentBlock--animate .frame1-text__part--top,
+.M-B-BannerBillboard__contentBlock--animateLast .frame1-text__part--top {
+  animation: frame1-part-fade-in .5s forwards;
+  animation-delay: 1s;
+}
+
+.M-B-BannerBillboard__contentBlock--animate .frame1-text__part--bottom,
+.M-B-BannerBillboard__contentBlock--animateLast .frame1-text__part--bottom {
+  animation: frame1-part-fade-in .5s forwards;
+  animation-delay: 1.2s;
+}
+
+.M-B-BannerBillboard__contentBlock--animate .frame2-text img,
+.M-B-BannerBillboard__contentBlock--animateLast .frame2-text img {
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1s;
+}
+
+.M-B-BannerBillboard__contentBlock--animate .frame2-badge img,
+.M-B-BannerBillboard__contentBlock--animateLast .frame2-badge img {
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1.2s;
+}
+
+.M-B-BannerBillboard__contentBlock--animate .frame2-cta img,
+.M-B-BannerBillboard__contentBlock--animateLast .frame2-cta img {
+  animation: text-fade-in .5s forwards;
+  animation-delay: 1.4s;
 }
 
 /* Frame 1 text area */
 .frame1-text {
   position: absolute;
-  top: 55px;
+  top: 75px;
   left: 16px;
   right: 16px;
   z-index: 1;
 }
 
 .frame1-text img {
-  width: 280px;
+  width: 210px;
   height: auto;
+}
+
+.frame1-text__part {
+  position: relative;
+  overflow: hidden;
+}
+
+.frame1-text__part--top {
+  height: 62px;
+}
+
+.frame1-text__part--bottom {
+  height: 65px;
+  margin-top: 0px;
+}
+
+.frame1-text__part--bottom img {
+  transform: translateY(-65px);
 }
 
 /* Frame 2 text area */
 .frame2-text {
   position: absolute;
-  top: 55px;
+  top: 80px;
   left: 16px;
   right: 16px;
   z-index: 1;
 }
 
 .frame2-text img.text2-img {
-  width: 280px;
+  width: 285px;
   height: auto;
 }
 
 .frame2-cta {
   position: absolute;
-  top: 170px;
-  left: 16px;
-  z-index: 1;
+    top: 156px;
+    left: 16px;
+    z-index: 1;
+    width: 95px;
 }
 
 .frame2-cta img {
-  height: 28px;
+  height: 40px;
   width: auto;
 }
 
 .frame2-badge {
   position: absolute;
-  top: 210px;
-  left: 16px;
+  top: 236px;
+  left: 12px;
   z-index: 2;
 }
 
 .frame2-badge img {
-  width: 90px;
+  width: 80px;
   height: auto;
 }
 
