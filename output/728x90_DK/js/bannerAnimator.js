@@ -7,7 +7,7 @@ var BANNER_SELECTORS = {
     loop: '.M-B-BannerLeaderBoard--loop'
 };
 
-var BANNER_CONTENT_DURATION = 4800;
+var BANNER_CONTENT_DURATION = 3360;
 
 var BannerAnimator = function() {
     this.currentContent = 0;

@@ -66,7 +66,7 @@
   0%, 6% {
     opacity: 0;
   }
-  7%, 40% {
+  7%, 45% {
     opacity: 1;
   }
   50%, 100% {
@@ -84,11 +84,11 @@
 }
 
 .M-B-BannerLeaderBoard__contentBlock--animate {
-  animation: content-block-fade-in-out 11s forwards cubic-bezier(.38,.04,.35,.96);
+  animation: content-block-fade-in-out 7.7s forwards cubic-bezier(.38,.04,.35,.96);
 }
 
 .M-B-BannerLeaderBoard__contentBlock--animateLast {
-  animation: content-block-fade-in-stay 1s forwards;
+  animation: content-block-fade-in-stay .7s forwards;
 }
 
 @keyframes frame1-part-fade-in {
@@ -111,32 +111,32 @@
 
 .M-B-BannerLeaderBoard__contentBlock--animate .frame1-text__part--top,
 .M-B-BannerLeaderBoard__contentBlock--animateLast .frame1-text__part--top {
-  animation: frame1-part-fade-in .5s forwards;
-  animation-delay: 1s;
+  animation: frame1-part-fade-in .35s forwards;
+  animation-delay: .7s;
 }
 
 .M-B-BannerLeaderBoard__contentBlock--animate .frame1-text__part--bottom,
 .M-B-BannerLeaderBoard__contentBlock--animateLast .frame1-text__part--bottom {
-  animation: frame1-part-fade-in .5s forwards;
-  animation-delay: 1.2s;
+  animation: frame1-part-fade-in .35s forwards;
+  animation-delay: .84s;
 }
 
 .M-B-BannerLeaderBoard__contentBlock--animate .frame2-text img,
 .M-B-BannerLeaderBoard__contentBlock--animateLast .frame2-text img {
-  animation: text-fade-in .5s forwards;
-  animation-delay: 1s;
+  animation: text-fade-in .35s forwards;
+  animation-delay: .7s;
 }
 
 .M-B-BannerLeaderBoard__contentBlock--animate .frame2-badge img,
 .M-B-BannerLeaderBoard__contentBlock--animateLast .frame2-badge img {
-  animation: text-fade-in .5s forwards;
-  animation-delay: 1.2s;
+  animation: text-fade-in .35s forwards;
+  animation-delay: .84s;
 }
 
 .M-B-BannerLeaderBoard__contentBlock--animate .frame2-cta img,
 .M-B-BannerLeaderBoard__contentBlock--animateLast .frame2-cta img {
-  animation: text-fade-in .5s forwards;
-  animation-delay: 1.4s;
+  animation: text-fade-in .35s forwards;
+  animation-delay: .98s;
 }
 
 /* Frame 1 text area - centered between logo and photo */
