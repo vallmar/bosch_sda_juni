@@ -1,0 +1,182 @@
+/* begin BannerLeaderBoard 320x100 */
+.M-B-BannerLeaderBoard {
+  position: relative;
+  display: block;
+  width: 320px;
+  height: 100px;
+  border: 1px solid lightgrey;
+  overflow: hidden;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.M-B-BannerLeaderBoard__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 76px;
+  height: 100px;
+  z-index: 2;
+}
+
+.M-B-BannerLeaderBoard__content {
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  height: 100px;
+}
+
+.M-B-BannerLeaderBoard__contentBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100px;
+  opacity: 0;
+}
+
+@keyframes content-block-fade-in-out {
+  0%, 6% {
+    opacity: 0;
+  }
+  7%, 45% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes content-block-fade-in-stay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animate {
+  animation: content-block-fade-in-out 7.7s forwards cubic-bezier(.38, .04, .35, .96);
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animateLast {
+  animation: content-block-fade-in-stay .7s forwards;
+}
+
+@keyframes frame1-part-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.frame1-text__part,
+.frame2-text img,
+.frame2-badge img,
+.frame2-cta img {
+  opacity: 0;
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animate .frame1-text__part--top,
+.M-B-BannerLeaderBoard__contentBlock--animateLast .frame1-text__part--top {
+  animation: frame1-part-fade-in .35s forwards;
+  animation-delay: .7s;
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animate .frame1-text__part--bottom,
+.M-B-BannerLeaderBoard__contentBlock--animateLast .frame1-text__part--bottom {
+  animation: frame1-part-fade-in .35s forwards;
+  animation-delay: .84s;
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animate .frame2-text img,
+.M-B-BannerLeaderBoard__contentBlock--animateLast .frame2-text img {
+  animation: text-fade-in .35s forwards;
+  animation-delay: .7s;
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animate .frame2-badge img,
+.M-B-BannerLeaderBoard__contentBlock--animateLast .frame2-badge img {
+  animation: text-fade-in .35s forwards;
+  animation-delay: .84s;
+}
+
+.M-B-BannerLeaderBoard__contentBlock--animate .frame2-cta img,
+.M-B-BannerLeaderBoard__contentBlock--animateLast .frame2-cta img {
+  animation: text-fade-in .35s forwards;
+  animation-delay: .98s;
+}
+
+.frame1-text {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  z-index: 1;
+}
+
+.frame1-text img {
+  width: 208px;
+}
+
+.frame1-text__part {
+  position: relative;
+  overflow: hidden;
+}
+
+.frame1-text__part--top {
+  height: 19px;
+}
+
+.frame1-text__part--bottom {
+  height: 24px;
+  margin-top: 0px;
+}
+
+.frame1-text__part--bottom img {
+  transform: translateY(-19px);
+}
+
+.frame2-text {
+  position: absolute;
+  top: 38px;
+  left: 31px;
+  z-index: 1;
+  width: 119px;
+}
+
+.frame2-text img.text2-img {
+  width: 119px;
+  height: auto;
+}
+
+.frame2-badge {
+  position: absolute;
+  top: 24px;
+  left: 161px;
+  z-index: 2;
+}
+
+.frame2-badge img {
+  width: 60px;
+  height: auto;
+}
+
+.frame2-cta {
+  position: absolute;
+  top: 44px;
+  left: 244px;
+  z-index: 1;
+  width: 64px;
+}
+
+.frame2-cta img {
+  width: 64px;
+  height: auto;
+}
+
+/* end BannerLeaderBoard 320x100 */
