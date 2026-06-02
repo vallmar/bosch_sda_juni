@@ -120,7 +120,7 @@
 }
 
 .frame1-text img {
-  width: 208px;
+  width: 278px;
 }
 
 .frame1-text__part {
@@ -129,7 +129,7 @@
 }
 
 .frame1-text__part--top {
-  height: 19px;
+  height: 15px;
 }
 
 .frame1-text__part--bottom {
@@ -138,7 +138,7 @@
 }
 
 .frame1-text__part--bottom img {
-  transform: translateY(-19px);
+  transform: translateY(-14px);
 }
 
 .frame2-text {
@@ -146,18 +146,18 @@
   top: 38px;
   left: 31px;
   z-index: 1;
-  width: 119px;
+  width: 137px;
 }
 
 .frame2-text img.text2-img {
-  width: 119px;
+  width: 137px;
   height: auto;
 }
 
 .frame2-badge {
   position: absolute;
   top: 24px;
-  left: 161px;
+  left: 173px;
   z-index: 2;
 }
 
