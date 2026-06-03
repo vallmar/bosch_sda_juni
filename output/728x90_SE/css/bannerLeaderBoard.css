@@ -143,7 +143,7 @@
 .frame1-text {
   position: absolute;
   top: 26px;
-  left: 165px;
+      left: 165px;
   z-index: 1;
 }
 
@@ -176,36 +176,35 @@ position: absolute;
     top: 26px;
     left: 165px;
     z-index: 1;
-    width: 130px;
+    width: 150px;
 }
 
 .frame2-text img.text2-img {
   height: 52px;
-  width: auto;
 }
 
 .frame2-badge {
   position: absolute;
   top: 9px;
-  left: 347px;
+  left: 342px;
   z-index: 2;
 }
 
 .frame2-badge img {
-  width: 69px;
+  width: 72px;
   height: auto;
 }
 
 .frame2-cta {
      position: absolute;
     top: 32px;
-    left: 435px;
+    left: 430px;
     z-index: 1;
 }
 
 .frame2-cta img {
   height: 31px;
-  width: 70px;
+  width: 75px;
 }
 
 /* end BannerLeaderBoard */

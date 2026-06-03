@@ -172,7 +172,7 @@
 /* Frame 2 text area */
 .frame2-text {
   position: absolute;
-  top: 88px;
+top: 88px;
   left: 18px;
   right: 8px;
   z-index: 1;
