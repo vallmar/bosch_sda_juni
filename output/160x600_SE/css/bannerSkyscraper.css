@@ -169,42 +169,43 @@
 .frame1-text__part--bottom img {
   transform: translateY(-49px);
 }
+
 /* Frame 2 text area */
 .frame2-text {
   position: absolute;
-top: 88px;
+  top: 88px;
   left: 18px;
   right: 8px;
   z-index: 1;
 }
 
 .frame2-text img.text2-img {
-  width: 119px;
+  width: 129px;
   height: auto;
 }
 
 .frame2-cta {
   position: absolute;
-  top: 209px;
+  top: 187px;
   left: 18px;
   z-index: 1;
 }
 
 .frame2-cta img {
   height: 36px;
-  width: 90px;
+  width: 100px;
 }
 
 .frame2-badge {
   position: absolute;
-  top: 325px;
+  top: 485px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
 }
 
 .frame2-badge img {
-  width: 95px;
+  width: 90px;
   height: auto;
 }
 
